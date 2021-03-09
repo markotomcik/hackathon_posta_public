@@ -1,0 +1,20 @@
+{layout "../../Admin/@layoutAdmin.latte"}
+{block content}
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Objednávka</th>
+            <th scope="col">Poloha</th>
+            <th scope="col">Status</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr n:foreach="$Logs as $log">
+            <th scope="row">{$log->log_id}</th>
+            <td>{$log->objednavka_id}</td>
+            <td>{$log->location}</td>
+            <td>{$log->status}</td>
+        </tr>
+    </tbody>
+</table>

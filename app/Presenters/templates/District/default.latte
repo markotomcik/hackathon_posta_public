@@ -1,0 +1,18 @@
+{layout "../../Admin/@layoutAdmin.latte"}
+{block content}
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">ID Adresy</th>
+            <th scope="col">Plus ID Adresy</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr n:foreach="$Districts as $district">
+            <th scope="row">{$district->zamestnanec_id}</th>
+            <td>{$district->meno}</td>
+            <td>{$district->priezvisko}</td>
+        </tr>
+    </tbody>
+</table>

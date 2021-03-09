@@ -1,0 +1,26 @@
+{layout "../../Admin/@layoutAdmin.latte"}
+{block content}
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Meno</th>
+            <th scope="col">Priezvisko</th>
+            <th scope="col">Adresa</th>
+            <th scope="col">PSČ</th>
+            <th scope="col">E-mail</th>
+            <th scope="col">Telefónne číslo</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr n:foreach="$Senders as $sender">
+            <th scope="row">{$sender->odosielatel_id}</th>
+            <td>{$sender->meno}</td>
+            <td>{$sender->priezvisko}</td>
+            <td>{$sender->adresa}</td>
+            <td>{$sender->psc}</td>
+            <td>{$sender->mail}</td>
+            <td>{$sender->phone}</td>
+        </tr>
+    </tbody>
+</table>

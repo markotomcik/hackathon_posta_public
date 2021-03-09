@@ -1,0 +1,50 @@
+{layout "../../Admin/@layoutAdmin.latte"}
+{block content}
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">ID adresáta</th>
+            <th scope="col">Dátum</th>
+            <th scope="col">Počet zásielok</th>
+            <th scope="col">Pošta</th>
+            <th scope="col">Rajón</th>
+            <th scope="col">Kraj</th>
+            <th scope="col">Okres</th>
+            <th scope="col">Obec</th>
+            <th scope="col">Časť obce</th>
+            <th scope="col">PSČ</th>
+            <th scope="col">Ulica</th>
+            <th scope="col">CO</th>
+            <th scope="col">CP</th>
+            <th scope="col">Axisl</th>
+            <th scope="col">Axisb</th>
+            <th scope="col">Typ</th>
+            <th scope="col">Odoberatelia</th>
+            <th scope="col">Poznámky</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th scope="row">{$oneDelivered->preberanie_id}</th>
+            <td>{$deliveryPlace->id_address}</td>
+            <td>{$oneDelivered->datum}</td>
+            <td>{$oneDelivered->počet_zasielok}</td>
+            <td>{$deliveryPlace->posta}</td>
+            <td>{$deliveryPlace->rajon}</td>
+            <td>{$deliveryPlace->kraj}</td>
+            <td>{$deliveryPlace->okres}</td>
+            <td>{$deliveryPlace->obec}</td>
+            <td>{$deliveryPlace->cast_obce}</td>
+            <td>{$deliveryPlace->psc}</td>
+            <td>{$deliveryPlace->ulica}</td>
+            <td>{$deliveryPlace->co}</td>
+            <td>{$deliveryPlace->cp}</td>
+            <td>{$deliveryPlace->axisl}</td>
+            <td>{$deliveryPlace->axisb}</td>
+            <td>{$deliveryPlace->typ}</td>
+            <td>{$deliveryPlace->odoberatela}</td>
+            <td>{$oneDelivered->notes}</td>
+        </tr>
+    </tbody>
+</table>

@@ -1,0 +1,26 @@
+{layout "../../Admin/@layoutAdmin.latte"}
+{block content}
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Meno</th>
+            <th scope="col">Priezvisko</th>
+            <th scope="col">Adresa</th>
+            <th scope="col">PSČ</th>
+            <th scope="col">E-mail</th>
+            <th scope="col">Telefónne číslo</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr n:foreach="$Receivers as $receiver">
+            <th scope="row">{$receiver->prijemca_id}</th>
+            <td>{$receiver->meno}</td>
+            <td>{$receiver->priezvisko}</td>
+            <td>{$receiver->adresa}</td>
+            <td>{$receiver->psc}</td>
+            <td>{$receiver->mail}</td>
+            <td>{$receiver->phone}</td>
+        </tr>
+    </tbody>
+</table>

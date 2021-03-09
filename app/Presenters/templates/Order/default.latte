@@ -1,0 +1,26 @@
+{layout "../../Admin/@layoutAdmin.latte"}
+{block content}
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Príjemca</th>
+            <th scope="col">Odosieľatel</th>
+            <th scope="col">Poznámky</th>
+            <th scope="col">Platobná metóda</th>
+            <th scope="col">Overenie platby</th>
+            <th scope="col">Čas</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr n:foreach="$Orders as $order">
+            <th scope="row">{$order->preberanie_id}</th>
+            <td>{$order->datum}</td>
+            <td>{$order->počet_zasielok}</td>
+            <td><a n:href="DeliveryPlace:view $order->id_address">{$order->id_address}</a></td>
+            <td>{$order->odoberatela}</td>
+            <td>{$order->notes}</td>
+
+        </tr>
+    </tbody>
+</table>

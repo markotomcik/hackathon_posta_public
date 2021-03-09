@@ -1,0 +1,43 @@
+{layout "../../Admin/@layoutAdmin.latte"}
+
+{block content}
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Pošta</th>
+            <th scope="col">Rajón</th>
+            <th scope="col">Kraj</th>
+            <th scope="col">Okres</th>
+            <th scope="col">Obec</th>
+            <th scope="col">Časť obce</th>
+            <th scope="col">PSČ</th>
+            <th scope="col">Ulica</th>
+            <th scope="col">CO</th>
+            <th scope="col">CP</th>
+            <th scope="col">Axisl</th>
+            <th scope="col">Axisb</th>
+            <th scope="col">Typ</th>
+            <th scope="col">Odoberatelia</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr n:foreach="$DeliveryPlaces as $deliveryPlace">
+            <th id="{$deliveryPlace->id_address}" scope="row">{$deliveryPlace->id_address}</th>
+            <td>{$deliveryPlace->posta}</td>
+            <td>{$deliveryPlace->rajon}</td>
+            <td>{$deliveryPlace->kraj}</td>
+            <td>{$deliveryPlace->okres}</td>
+            <td>{$deliveryPlace->obec}</td>
+            <td>{$deliveryPlace->cast_obce}</td>
+            <td>{$deliveryPlace->psc}</td>
+            <td>{$deliveryPlace->ulica}</td>
+            <td>{$deliveryPlace->co}</td>
+            <td>{$deliveryPlace->cp}</td>
+            <td>{$deliveryPlace->axisl}</td>
+            <td>{$deliveryPlace->axisb}</td>
+            <td>{$deliveryPlace->typ}</td>
+            <td>{$deliveryPlace->odoberatela}</td>
+        </tr>
+    </tbody>
+</table>

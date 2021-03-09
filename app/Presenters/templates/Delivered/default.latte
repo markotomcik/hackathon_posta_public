@@ -1,0 +1,25 @@
+{layout "../../Admin/@layoutAdmin.latte"}
+{block content}
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Dátum</th>
+            <th scope="col">Počet zásielok</th>
+            <th scope="col">ID adresáta</th>
+            <th scope="col">Odoberatelia</th>
+            <th scope="col">Poznámky</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr n:foreach="$Delivered as $oneDelivered">
+            <th scope="row">{$oneDelivered->preberanie_id}</th>
+            <td>{$oneDelivered->datum}</td>
+            <td>{$oneDelivered->počet_zasielok}</td>
+            <td><a n:href="DeliveryPlace:view $oneDelivered->id_address">{$oneDelivered->id_address}</a></td>
+            <td>{$oneDelivered->odoberatela}</td>
+            <td>{$oneDelivered->notes}</td>
+
+        </tr>
+    </tbody>
+</table>

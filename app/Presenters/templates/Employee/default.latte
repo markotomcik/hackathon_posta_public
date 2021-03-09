@@ -1,0 +1,30 @@
+{layout "../../Admin/@layoutAdmin.latte"}
+{block content}
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Meno</th>
+            <th scope="col">Priezvisko</th>
+            <th scope="col">Adresa</th>
+            <th scope="col">PSČ</th>
+            <th scope="col">E-mail</th>
+            <th scope="col">Telefónne číslo</th>
+            <th scope="col">Úväzok</th>
+            <th scope="col">Rajón</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr n:foreach="$Employees as $employee">
+            <th scope="row">{$employee->zamestnanec_id}</th>
+            <td>{$employee->meno}</td>
+            <td>{$employee->priezvisko}</td>
+            <td>{$employee->adresa}</td>
+            <td>{$employee->psc}</td>
+            <td>{$employee->mail}</td>
+            <td>{$employee->phone}</td>
+            <td>{$employee->uvazok}</td>
+            <td>{$employee->rajon}</td>
+        </tr>
+    </tbody>
+</table>
